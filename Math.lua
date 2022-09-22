@@ -14,15 +14,12 @@ local function product(list)
     return Array.reduce(list, multiply, 1)
 end
 
-local function round(value)
-    local result
-    local firstDigitAfterDecimalSeparator = math.floor((value - math.floor(value)) * 10)
-    if firstDigitAfterDecimalSeparator >= 5 then
-        result = math.ceil(value)
-    else
-        result = math.floor(value)
+local function round(value, numberOfDigitsAfterTheDecimalSeparator)
+    if numberOfDigitsAfterTheDecimalSeparator == nil then
+       numberOfDigitsAfterTheDecimalSeparator = 0
     end
-    return result
+    local a = 10^ numberOfDigitsAfterTheDecimalSeparator
+    return math.floor(value * a + 0.5) / a
 end
 
 Math = {
