@@ -32,11 +32,45 @@ local function sign(value)
   end
 end
 
+local function euclideanDistance(nodeA, nodeB)
+  return math.sqrt(
+    math.pow(nodeB.x - nodeA.x, 2) +
+      math.pow(nodeB.y - nodeA.y, 2) +
+      math.pow(nodeB.z - nodeA.z, 2)
+  )
+end
+
+local function euclideanDistance2D(nodeA, nodeB)
+  return math.sqrt(
+    math.pow(nodeB.x - nodeA.x, 2) +
+      math.pow(nodeB.y - nodeA.y, 2)
+  )
+end
+
+local function manhattanDistance(nodeA, nodeB)
+  return (
+    math.abs(nodeB.x - nodeA.x) +
+      math.abs(nodeB.y - nodeA.y) +
+      math.abs(nodeB.z - nodeA.z)
+  )
+end
+
+local function manhattanDistance2D(nodeA, nodeB)
+  return (
+    math.abs(nodeB.x - nodeA.x) +
+      math.abs(nodeB.y - nodeA.y)
+  )
+end
+
 Math = {
   add = add,
   sum = sum,
   multiply = multiply,
   product = product,
   round = round,
-  sign = sign
+  sign = sign,
+  euclideanDistance = euclideanDistance,
+  euclideanDistance2D = euclideanDistance2D,
+  manhattanDistance = manhattanDistance,
+  manhattanDistance2D = manhattanDistance2D
 }
