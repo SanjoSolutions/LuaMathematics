@@ -1,6 +1,4 @@
 ## Title: Math
 ## Interface: 30400
-## Version: 1.0.0
 
-libs/Library/Library.lua
 Math.lua
