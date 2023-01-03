@@ -62,6 +62,10 @@ local function manhattanDistance2D(nodeA, nodeB)
   )
 end
 
+local function average(values)
+  return sum(values) / Array.length(values)
+end
+
 Math = {
   add = add,
   sum = sum,
@@ -72,5 +76,6 @@ Math = {
   euclideanDistance = euclideanDistance,
   euclideanDistance2D = euclideanDistance2D,
   manhattanDistance = manhattanDistance,
-  manhattanDistance2D = manhattanDistance2D
+  manhattanDistance2D = manhattanDistance2D,
+  average = average
 }

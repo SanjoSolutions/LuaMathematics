@@ -1,4 +1,5 @@
 ## Title: Math
 ## Interface: 100002
+## Dependencies: Array
 
 Math.lua
