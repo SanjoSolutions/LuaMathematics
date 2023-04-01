@@ -1,5 +1,5 @@
-## Title: Math
+## Title: Mathematics
 ## Interface: 30400
 ## Dependencies: Array
 
-Math.lua
+Mathematics.lua

@@ -1,20 +1,20 @@
-local function add(a, b)
+function Mathematics.add(a, b)
   return a + b
 end
 
-local function sum(list)
+function Mathematics.sum(list)
   return Array.reduce(list, add, 0)
 end
 
-local function multiply(a, b)
+function Mathematics.multiply(a, b)
   return a * b
 end
 
-local function product(list)
+function Mathematics.product(list)
   return Array.reduce(list, multiply, 1)
 end
 
-local function round(value, numberOfDigitsAfterTheDecimalSeparator)
+function Mathematics.round(value, numberOfDigitsAfterTheDecimalSeparator)
   if numberOfDigitsAfterTheDecimalSeparator == nil then
     numberOfDigitsAfterTheDecimalSeparator = 0
   end
@@ -22,7 +22,7 @@ local function round(value, numberOfDigitsAfterTheDecimalSeparator)
   return math.floor(value * a + 0.5) / a
 end
 
-local function sign(value)
+function Mathematics.sign(value)
   if value < 0 then
     return -1
   elseif value == 0 then
@@ -32,7 +32,7 @@ local function sign(value)
   end
 end
 
-local function euclideanDistance(nodeA, nodeB)
+function Mathematics.euclideanDistance(nodeA, nodeB)
   return math.sqrt(
     math.pow(nodeB.x - nodeA.x, 2) +
       math.pow(nodeB.y - nodeA.y, 2) +
@@ -40,14 +40,14 @@ local function euclideanDistance(nodeA, nodeB)
   )
 end
 
-local function euclideanDistance2D(nodeA, nodeB)
+function Mathematics.euclideanDistance2D(nodeA, nodeB)
   return math.sqrt(
     math.pow(nodeB.x - nodeA.x, 2) +
       math.pow(nodeB.y - nodeA.y, 2)
   )
 end
 
-local function manhattanDistance(nodeA, nodeB)
+function Mathematics.manhattanDistance(nodeA, nodeB)
   return (
     math.abs(nodeB.x - nodeA.x) +
       math.abs(nodeB.y - nodeA.y) +
@@ -55,27 +55,13 @@ local function manhattanDistance(nodeA, nodeB)
   )
 end
 
-local function manhattanDistance2D(nodeA, nodeB)
+function Mathematics.manhattanDistance2D(nodeA, nodeB)
   return (
     math.abs(nodeB.x - nodeA.x) +
       math.abs(nodeB.y - nodeA.y)
   )
 end
 
-local function average(values)
+function Mathematics.average(values)
   return sum(values) / Array.length(values)
 end
-
-Math = {
-  add = add,
-  sum = sum,
-  multiply = multiply,
-  product = product,
-  round = round,
-  sign = sign,
-  euclideanDistance = euclideanDistance,
-  euclideanDistance2D = euclideanDistance2D,
-  manhattanDistance = manhattanDistance,
-  manhattanDistance2D = manhattanDistance2D,
-  average = average
-}
