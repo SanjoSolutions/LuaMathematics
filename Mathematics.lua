@@ -1,4 +1,4 @@
-Mathematics = Mathematics or {}
+local Mathematics = Library.create('Mathematics', '1.0.0')
 
 function Mathematics.add(a, b)
   return a + b
