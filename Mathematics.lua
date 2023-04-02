@@ -1,3 +1,5 @@
+Mathematics = Mathematics or {}
+
 function Mathematics.add(a, b)
   return a + b
 end
