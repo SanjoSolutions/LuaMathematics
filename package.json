@@ -1,7 +1,8 @@
 {
   "name": "@sanjo-addons/mathematics",
-  "version": "1.1.0",
+  "version": "2.0.1",
   "dependencies": {
+    "@sanjo-addons/array": "^2.0.1"
   },
   "publishConfig": {
     "access": "public"

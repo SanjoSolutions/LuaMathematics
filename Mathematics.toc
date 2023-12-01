@@ -1,6 +1,6 @@
 ## Title: Mathematics
 ## Interface: 100105
 ## Dependencies: Array
-## Version: 1.1.0
+## Version: 2.0.1
 
 Mathematics.lua
